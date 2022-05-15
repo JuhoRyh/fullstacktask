@@ -1,12 +1,39 @@
-const bookModel = require('../models/bookModel');
+const knex = require('../../db/knex');
 
-const getAll = async (req, res) => {
-  const books = await bookModel.findAll();
-  res.send(books);
-};
+const findAll = () => (
+  knex('books')
+    .select('*')
+    .orderBy('id')
+);
+
+const findById = (id) => (
+  knex('books')
+    .where('id', id)
+);
+
+const create = (body) => (
+  knex('books')
+    .insert(body)
+);
+
+const deleteById = (id) => (
+  knex('books')
+    .where('id', id)
+    .del([id])
+);
+
+const updateBookById = (body, id) => (
+  knex('books')
+    .where('id', id)
+    .update(body)
+);
 
 const bookHandler = {
-  getAll,
+  findAll,
+  findById,
+  create,
+  deleteById,
+  updateBookById,
 };
 
 module.exports = bookHandler;

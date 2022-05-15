@@ -1,0 +1,18 @@
+input {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  resize: vertical;
+}
+
+.textarea-box {
+  width: 100%;
+}
+
+.book-editor {
+  margin: 2rem;
+}

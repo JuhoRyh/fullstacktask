@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+}
+
+.content-half {
+  width: 50%;
+  max-height: 80%;
+}

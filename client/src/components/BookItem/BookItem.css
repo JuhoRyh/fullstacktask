@@ -1,0 +1,7 @@
+.list-item-button {
+  display: inline-block;
+  text-align: left;
+  background-color: white;
+  border: 2px solid gray;
+  width: 100%;
+}
